@@ -1,0 +1,549 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7fafc 0%, #fef7f8 50%, #f0f9ff 100%);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(205, 212, 221, 0.5);
+  padding: 1.5rem 2rem;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.headerTitle h1 {
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0;
+}
+
+.headerTitle p {
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+.askButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, #22819a 0%, #1b6b7f 100%);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px -2px rgba(34, 129, 154, 0.3);
+}
+
+.askButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -2px rgba(34, 129, 154, 0.4);
+}
+
+.main {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Analytics Cards */
+.analyticsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .analyticsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .analyticsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.analyticsCard {
+  background: linear-gradient(145deg, #ffffff 0%, #fef7f8 100%);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px -10px rgba(34, 129, 154, 0.1);
+  border: 1px solid rgba(205, 212, 221, 0.3);
+  transition: all 0.3s ease;
+}
+
+.analyticsCard:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 50px -10px rgba(34, 129, 154, 0.15);
+}
+
+.analyticsHeader {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.analyticsIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.analyticsIcon teal {
+  background: linear-gradient(135deg, #22819a 0%, #90c2e7 100%);
+}
+
+.analyticsIcon emerald {
+  background: linear-gradient(135deg, #10b981 0%, #6ee7b7 100%);
+}
+
+.analyticsIcon amber {
+  background: linear-gradient(135deg, #f59e0b 0%, #fcd34d 100%);
+}
+
+.analyticsIcon sky {
+  background: linear-gradient(135deg, #90c2e7 0%, #cce7f5 100%);
+}
+
+.analyticsChange {
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.analyticsValue {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.analyticsLabel {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-top: 0.25rem;
+}
+
+/* AI Banner */
+.aiBanner {
+  background: linear-gradient(135deg, rgba(34, 129, 154, 0.1) 0%, rgba(144, 194, 231, 0.15) 100%);
+  border: 1px solid rgba(34, 129, 154, 0.2);
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.aiBannerIcon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #22819a 0%, #90c2e7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.aiBannerContent {
+  flex: 1;
+}
+
+.aiBannerTitle {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.25rem;
+}
+
+.aiBannerText {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* Filters */
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .filters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.searchBox {
+  position: relative;
+  flex: 1;
+  max-width: 24rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.searchInput {
+  width: 100%;
+  height: 2.75rem;
+  padding-left: 2.75rem;
+  padding-right: 1rem;
+  border-radius: 0.75rem;
+  border: 1px solid #e2e8f0;
+  background: white;
+  font-size: 0.875rem;
+  transition: all 0.2s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #22819a;
+  box-shadow: 0 0 0 3px rgba(34, 129, 154, 0.1);
+}
+
+.filterTabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filterTab {
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+}
+
+.filterTab:hover {
+  background: #f1f5f9;
+}
+
+.filterTabActive {
+  background: linear-gradient(135deg, #22819a 0%, #1b6b7f 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.filterTabActive:hover {
+  background: linear-gradient(135deg, #1b6b7f 0%, #165a66 100%);
+}
+
+/* Doubt Cards */
+.doubtList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.doubtCard {
+  background: white;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 40px -10px rgba(34, 129, 154, 0.08);
+  border: 1px solid rgba(205, 212, 221, 0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.doubtCard:hover {
+  box-shadow: 0 20px 50px -10px rgba(34, 129, 154, 0.12);
+}
+
+.doubtCardHeader {
+  padding: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.doubtCardHeader:hover {
+  background: #f8fafc;
+}
+
+.doubtCardTop {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.doubtImagePreview {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.doubtContent {
+  flex: 1;
+  min-width: 0;
+}
+
+.doubtQuestion {
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.doubtMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.75rem;
+  color: #64748b;
+}
+
+.doubtMetaItem {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.doubtBadges {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.statusBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.statusResolved {
+  background: #d1fae5;
+  color: #047857;
+}
+
+.statusPending {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.statusInProgress {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.subjectBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.subjectMath {
+  background: rgba(144, 194, 231, 0.2);
+  color: #22819a;
+}
+
+.subjectPhysics {
+  background: rgba(34, 129, 154, 0.1);
+  color: #22819a;
+}
+
+.subjectChemistry {
+  background: rgba(168, 85, 247, 0.1);
+  color: #9333ea;
+}
+
+.doubtCardActions {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.expandButton {
+  padding: 0.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+}
+
+.expandButton:hover {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+/* Expanded Content */
+.doubtCardExpanded {
+  border-top: 1px solid #e2e8f0;
+  padding: 1.5rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #fef7f8 100%);
+}
+
+.responseSection {
+  margin-bottom: 1.5rem;
+}
+
+.responseLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+}
+
+.responseLabelIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.responseBox {
+  padding: 1rem;
+  border-radius: 0.75rem;
+  background: white;
+  border: 1px solid #e2e8f0;
+}
+
+.responseText {
+  font-size: 0.875rem;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.aiResponse .responseLabelIcon {
+  background: linear-gradient(135deg, #22819a 0%, #90c2e7 100%);
+  color: white;
+}
+
+.teacherResponse .responseLabelIcon {
+  background: linear-gradient(135deg, #6366f1 0%, #818cf8 100%);
+  color: white;
+}
+
+/* Feedback Section */
+.feedbackSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.feedbackText {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+.feedbackButtons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.feedbackButton {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 1px solid #e2e8f0;
+  background: white;
+  color: #64748b;
+}
+
+.feedbackButton:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.feedbackButtonActive {
+  background: #d1fae5;
+  border-color: #10b981;
+  color: #047857;
+}
+
+/* Empty State */
+.emptyState {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.emptyIcon {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  background: #f1f5f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  color: #94a3b8;
+}
+
+.emptyTitle {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.emptyText {
+  color: #64748b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animateIn {
+  animation: fadeIn 0.4s ease forwards;
+}
