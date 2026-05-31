@@ -132,7 +132,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👥 Team
 
 Built with ❤️ by the EnlightEd Team
-
----
-
-**Note**: This is an educational project showcasing modern web development practices with Next.js and TypeScript.
